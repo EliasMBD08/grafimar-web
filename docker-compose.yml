@@ -3,29 +3,29 @@ networks:
     external: true
 
 services:
-  portafolio-elias:
+  web-grafimar:
     build:
       context: .
       dockerfile: Dockerfile
-    image: portafolio-elias
-    container_name: portafolio-elias
+    image: web-grafimar
+    container_name: web-grafimar
     restart: always
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik-network
 
       # HTTP (redirección a HTTPS)
-      - traefik.http.routers.portafolio-elias-http.rule=Host(`elias.bitnovastudios.com`) || Host(`www.elias.bitnovastudios.com`)
-      - traefik.http.routers.portafolio-elias-http.entrypoints=web
-      - traefik.http.routers.portafolio-elias-http.middlewares=redirect-to-https
+      - traefik.http.routers.web-grafimar-http.rule=Host(`cgrafimar.com`) || Host(`www.cgrafimar.com`)
+      - traefik.http.routers.web-grafimar-http.entrypoints=web
+      - traefik.http.routers.web-grafimar-http.middlewares=redirect-to-https
 
       # HTTPS
-      - traefik.http.routers.portafolio-elias.rule=Host(`elias.bitnovastudios.com`) || Host(`www.elias.bitnovastudios.com`)
-      - traefik.http.routers.portafolio-elias.entrypoints=websecure
-      - traefik.http.routers.portafolio-elias.tls=true
-      - traefik.http.routers.portafolio-elias.tls.certresolver=letsencrypt
+      - traefik.http.routers.web-grafimar.rule=Host(`cgrafimar.com`) || Host(`www.cgrafimar.com`)
+      - traefik.http.routers.web-grafimar.entrypoints=websecure
+      - traefik.http.routers.web-grafimar.tls=true
+      - traefik.http.routers.web-grafimar.tls.certresolver=letsencrypt
 
       # Puerto interno del contenedor
-      - traefik.http.services.portafolio-elias.loadbalancer.server.port=80
+      - traefik.http.services.web-grafimar.loadbalancer.server.port=80
     networks:
       - traefik-network

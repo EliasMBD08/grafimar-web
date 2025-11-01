@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copiar archivos build desde el stage anterior
-COPY --from=builder /app/dist/portafolio/browser /usr/share/nginx/html
+COPY --from=builder /app/dist/web/browser /usr/share/nginx/html
 
 # Copiar configuración personalizada de nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
