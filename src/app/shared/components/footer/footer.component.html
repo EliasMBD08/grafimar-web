@@ -1,0 +1,102 @@
+<div class="w-full overflow-hidden">
+  <!-- Fondo como imagen de fondo -->
+  <!-- <div
+    class="absolute inset-0 bg-center bg-cover pointer-events-none"
+    style="
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-three-industrial-air-conditioning-equipment-on-a-roof-image_2938295.jpg');
+    "
+  ></div> -->
+  <!-- Contenido del footer -->
+  <div class="relative w-full h-full flex bg-cuaternario justify-center">
+    <div
+      class="max-w-[1000px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center py-20 gap-y-10 pb-10"
+    >
+      <!-- Logo -->
+      <div class="flex flex-col gap-5">
+        <a routerLink="/">
+          <div class="overflow-hidden max-w-[300px]">
+            <img
+              src="/images/logos/cgm_dark.svg"
+              alt="Logo Grafimar"
+              class="w-full"
+            />
+          </div>
+        </a>
+        <div class="w-full flex justify-center gap-8">
+          @for (item of contactos; track item.label ) {
+
+          <a
+            [href]="item.link"
+            target="_blank"
+            class="text-secundario flex items-center space-x-2"
+            [attr.aria-label]="item.label"
+          >
+            <i
+              [class]="item.icon"
+              class="text-xl hover:text-primario-1 transition-colors duration-200"
+            ></i>
+          </a>
+          }
+        </div>
+      </div>
+      <!-- Servicios -->
+      <div class="flex flex-col text-sm text-center lg:text-start">
+        <div class="text-lg text-terciario font-bold mb-2">Servicios</div>
+        <ul class="list-none p-0 space-y-2">
+          @for (item of servicios; track item.id ) {
+          <li>
+            <a
+              [routerLink]="item.href"
+              class="text-secundario hover:text-primario-1 transition-colors duration-200"
+              [attr.aria-label]="item.nombre"
+            >
+              {{ item.nombre }}
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+      <!-- Contacto -->
+      <!-- <div class="flex flex-col text-sm text-center lg:text-start">
+        <div class="text-lg text-terciario font-bold mb-2">Contacto</div>
+        <ul class="list-none p-0 space-y-2">
+            @for (item of contactos; track item.label ) {
+                <li>
+                  <a [href]="item.link" target="_blank" class="text-secundario flex items-center space-x-2" [attr.aria-label]="item.label">
+                    <i [class]="item.icon"></i>
+                    <span>{{item.text}}</span>
+                  </a>
+                </li>
+            }
+        </ul>
+      </div> -->
+      <!-- Cuentas Bancarias -->
+      <div class="flex flex-col text-sm text-center lg:text-start gap-2">
+        <div class="text-lg text-terciario gap-1">Formas de Pago</div>
+        <div class="flex gap-2 text-secundario">
+          @for (item of formasPago; track item.alt ) {
+          <span><img [src]="item.src" class="w-10" [alt]="item.alt" /></span>
+          }
+        </div>
+      </div>
+      <div class="flex flex-col text-sm text-center lg:text-start">
+        <div class="text-lg text-terciario gap-1">Cuentas Bancarias</div>
+        <div class="flex flex-col text-secundario gap-2">
+          @for (item of cuentasBancarias; track item.alt ) {
+          <div class="flex gap-2 items-center">
+            <img
+              [src]="item.logo"
+              class="w-10 p-1 h-9 bg-white rounded-sm"
+              [alt]="item.alt"
+            />
+            <div class="flex flex-col">
+              <span>{{ item.numeroCuenta }}</span>
+              <span>{{ item.cuentaInterbancaria }}</span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

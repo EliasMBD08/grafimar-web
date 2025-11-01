@@ -1,0 +1,27 @@
+
+<div class="w-full" [class]="tipoClass" >
+    <div class="backdrop-blur-sm bg-primario transition-all duration-300" [ngClass]="{'bg-primario': isScrolled || !isFirstLink, 'bg-transparent': !isScrolled && isFirstLink}" >
+        <div class="flex justify-between items-center h-full max-w-[1000px] mx-auto text-gray-700">
+            <a routerLink="/" class="flex justify-center items-center w-16 overflow-hidden ms-8 md:ms-0">
+                <img src="/images/logos/cgm_dark.svg" class="w-full" alt="">
+            </a>
+            <div class="h-full hidden md:flex">
+                @for (item of items; track item.label ) {
+                    <app-navbar-link [navbarLink]="item" class="h-full">
+                        <i icon-link [class]="item.icon" class="text-secundario"></i>
+                    </app-navbar-link>
+                }
+            </div>
+            <button class="border-none bg-transparent hover:bg-primario/ p-7 text-sec cursor-pointer md:hidden" (click)="toggleMenu()"><i class="pi pi-bars text-secundario"></i></button>
+        </div>
+    </div>
+    <div [ngClass]="{'max-h-0': !isMenuVisible, 'max-h-96': isMenuVisible}" class="overflow-hidden transition-max-height duration-500 ease-in-out md:hidden text-gray-700" (click)="toggleMenu()">
+        <div class="bg-primario w-full flex flex-col py-4">
+            @for (item of items; track item.label ) {
+                <app-navbar-link [navbarLink]="item" class="w-full">
+                    <i icon-link [class]="item.icon" class="text-secundario"></i>
+                </app-navbar-link>
+            }
+        </div>
+    </div>
+</div>

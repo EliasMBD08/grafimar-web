@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Volantes",
+        "src_img": "/images/destacados/productos/volantes.webp",
+        "precio": "85.00"
+    },
+    {
+        "id": 2,
+        "nombre": "Banner",
+        "src_img": "/images/destacados/productos/banners.webp",
+        "precio": "120.00"
+    },
+    {
+        "id": 3,
+        "nombre": "Tazas",
+        "src_img": "/images/destacados/productos/tazas.webp",
+        "precio": "45.00"
+    },
+    {
+        "id": 4,
+        "nombre": "Stickers",
+        "src_img": "/images/destacados/productos/stickers.webp",
+        "precio": "30.00"
+    }
+]

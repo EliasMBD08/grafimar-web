@@ -1,0 +1,47 @@
+<div
+  class="w-full flex flex-col items-center justify-center relative top-0 bg-black"
+  [ngStyle]="{ 'height': finalHeight }"
+>
+  <div class="flex w-11/12 m-auto justify-between absolute z-20">
+    <i
+      class="pi pi-angle-left opacity-50 hover:opacity-80 text-white text-5xl cursor-pointer justify-between"
+      (click)="setBack()"
+    ></i>
+    <i
+      class="pi pi-angle-right opacity-50 hover:opacity-80 text-white text-5xl cursor-pointer justify-between"
+      (click)="setNext()"
+    ></i>
+  </div>
+  <div
+    class="flex text-center w-full h-full self-stretch transform ease-in duration-500 overflow-hidden  "
+  >
+    @for (item of items(); track item.id ) {
+    <div
+      class="flex flex-col justify-center items-center min-w-full h-full relative bg-cover bg-no-repeat float-left bg-center flex-shrink-0 transition-all duration-1000"
+      [ngStyle]="{
+        'background-image': 'url(' + item.image + ')',
+        'margin-left': item.marginLeft + '%'
+      }"
+    >
+      <div class="absolute bg-black/70 w-full h-full z-0"></div>
+      <h1 class="text-white font-black uppercase z-10">
+        {{ item.title?.first }}
+        <span class="text-orange-500">{{ item.title?.second }}</span>
+      </h1>
+      <p class="text-white z-10 font-semibold text-lg">{{ item.subtitle }}</p>
+    </div>
+
+    } @empty { }
+  </div>
+  <div class="flex justify-center w-full absolute bottom-4">
+    @for (item of items(); track item.id ) {
+    <div
+      class="h-2 w-6 my-0 mx-1 rounded-full cursor-pointer border border-solid border-gray-300 hover:opacity-70 hover:bg-white {{
+        currentPosition === item.id ? 'opacity-70 bg-white' : ''
+      }}"
+      (click)="setCurrentPosition(item.id)"
+    ></div>
+
+    } @empty { }
+  </div>
+</div>

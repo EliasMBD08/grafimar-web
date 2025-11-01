@@ -1,0 +1,19 @@
+<!-- <a href="" class="text-primario"> -->
+    <div class="mx-auto w-auto max-w-[450px] rounded-lg bg-transparent shadow-md overflow-hidden">
+        <div class="overflow-hidden w-full h-[200px]">
+            <img appImgBroken [src]="categoria().src_img" [alt]="categoria().nombre" class="object-cover w-full h-full">
+        </div>
+        <div class="p-5 flex flex-col gap-5">
+            <div class="w-full text-2xl font-bold"><i class="text-green-500 text-2xl pi pi-verified me-2"></i>{{categoria().nombre}}</div>
+            <!-- <button (click)="verDetalleCategoria(categoria())" class="py-3 px-16 bg-transparent text-primario rounded-md border border-solid border-primario hover:bg-gradient-to-bl hover:from-primario-2 hover:border-none hover:to-primario hover:text-secundario transition-all duration-200 cursor-pointer">Cotizar</button> -->
+             <a routerLink="/contacto" class="bg-transparent text-primario rounded-md  overflow-hidden  bg-gradient-to-bl from-primario-2 to-primario hover:text-secundario cursor-pointer"><span class="w-full h-full block rounded-md py-3 px-16 border-solid border border-primario bg-white hover:bg-transparent transition-colors duration-300">Cotizar</span></a>
+            <ul class="list-none p-0 ps-1 m-0 text-start ">
+                @for (item of categoria().productos; track item ) {
+                    <li class="flex my-1 items-center"><i class="text-xs text-primario-2 pi pi-check-square me-2"></i><span>{{item}}</span></li>
+                } @empty {
+                    
+                }
+            </ul>
+        </div>
+    </div>
+<!-- </a> -->

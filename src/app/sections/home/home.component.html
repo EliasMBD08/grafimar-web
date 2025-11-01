@@ -1,0 +1,73 @@
+
+  <app-carousel [items]="carousel_items" [isFullScreen]="true" />
+  
+  <div class="contenedor contenedor--secundario">
+    <div class="subcontenedor">
+      <div class="text-center w-full text-primario-2 font-bold text-4xl">
+        Productos <span class="text-slate-900">Destacados</span>
+      </div>
+      <div class="flex flex-wrap h-full justify-center gap-7">
+        <!-- <div class="flex w-full justify-center items-center"> -->
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full justify-center gap-7" > -->
+        @for (item of productos; track item.id ) {
+        <app-card-producto [producto]="item"></app-card-producto>
+        }
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="contenedor contenedor--primario">
+    <div class="subcontenedor">
+      <div class="text-center w-full text-primario-1 font-bold text-4xl">
+        Nuestra <span class="text-secundario">Garantía</span>
+      </div>
+      <div class="flex flex-wrap h-full justify-center gap-7">
+        <!-- <div class="flex h-full w-full justify-center"> -->
+        <!-- <div class="grid h-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-7 items-center"> -->
+        @for (item of garantias; track item.id ) {
+        <app-card-garantia [garantia]="item">
+          <i [class]="item.icon" class="text-6xl text-primario-2"></i>
+          <!-- <span class="material-symbols-rounded text-3xl">
+                          settings
+                      </span> -->
+        </app-card-garantia>
+        }
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="contenedor contenedor--secundario">
+    <div class="subcontenedor">
+      <div class="text-center w-full text-primario-2 font-bold text-4xl">
+        Nuestros <span class="text-slate-900">Clientes</span>
+      </div>
+      <div class="flex flex-wrap w-full justify-center gap-7">
+        @for (item of clientes; track item.id ) {
+        <app-card-cliente [cliente]="item"></app-card-cliente>
+        }
+      </div>
+    </div>
+  </div>
+  
+  <div class="contenedor contenedor--primario">
+      <div class="subcontenedor">
+        <div class="text-center w-full text-primario-1 font-bold text-4xl">
+          Preguntas <span class="text-secundario">Frecuentes</span>
+        </div>
+        <div class="flex flex-col flex-wrapjustify-center gap-7">
+          <p-accordion [activeIndex]="[0]">
+            @for (item of preguntas_respuestas; track item.id ) {
+              <p-accordionTab [header]="item.pregunta" tabStyleClass="border-b-2 border-solid border-0 border-primario-1" headerStyleClass="bg-transparent border-none text-gray-200/80" contentStyleClass="bg-transparent border-none pt-0 " >
+                <p class="m-0 text-secundario">
+                  {{item.respuesta}}
+                </p>
+            </p-accordionTab>
+            } 
+          </p-accordion>
+        </div>
+      </div>
+  </div>

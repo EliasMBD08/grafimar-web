@@ -1,0 +1,15 @@
+<div class="contenedor contenedor--secundario">
+  <div class="subcontenedor text-center">
+    <div class="w-full text-primario-2 font-bold text-4xl">
+      Nuestros <span class="text-primario">Servicios</span>
+    </div>
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        @for (item of categorias; track item.id ) {
+            <app-categoria [categoria]="item" />
+        } @empty {
+            
+        }
+    </div>
+  </div>
+</div>
+<router-outlet />

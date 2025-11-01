@@ -1,0 +1,14 @@
+<div class="flex flex-col rounded-md p-2 pb-4 h-full border-none gap-2 w-80 bg-transparent">
+    <!-- Asegúrate de que el contenedor de la imagen sea cuadrado -->
+    <!-- <div class="rounded-md w-72 h-72 p-2 mx-auto border-primario-1 border-3 border-solid flex justify-center items-center"> -->
+        <div class="w-full h-full overflow-hidden rounded-md">
+            <img [src]="empleado().url_img" [alt]="empleado().nombre" class="object-cover w-full h-full">
+        </div>
+    <!-- </div> -->
+    <div class="text-xl text-center text-white mt-2">
+        {{empleado().nombre}}
+    </div>
+    <div class="text-md text-center font-bold text-primario-1">
+        {{empleado().puesto}}
+    </div>
+</div>

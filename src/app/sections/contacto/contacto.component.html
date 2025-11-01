@@ -1,0 +1,102 @@
+<div class="contenedor contenedor--secundario">
+  <div class="subcontenedor">
+    <div class="w-full text-center text-primario-2 font-bold text-4xl">
+      Contáctanos
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8">
+      <div class="flex flex-col text-center md:text-start items-center md:items-start">
+        <div class="text-5xl text-orange-600 font-semibold leading-tight">¿Listo para hacer tu pedido?</div>
+        <span class="w-52 h-[1px] bg-gray-500 rounded-full my-8 md:my-6"></span>
+        <div class="flex flex-col gap-2">
+          @for (item of contactos; track item.label ) {
+          <a
+            [href]="item.link"
+            target="_blank"
+            class="text-gray-800 flex items-center space-x-2"
+            [attr.aria-label]="item.label"
+          >
+            <i [class]="item.icon"></i>
+            <span>{{ item.text }}</span>
+          </a>
+          }
+        </div>
+      </div>
+      <form [formGroup]="formulario()" (ngSubmit)="onSubmit()" class="flex flex-col ">
+        <label class="text-primario text-lg font-semibold" for="nombre">Nombres:</label>
+        <input class="bg-gray-50 text-gray-800 border border-solid border-primario-2 rounded-md"
+          id="nombre"
+          formControlName="nombre"
+          placeholder="Ingrese su nombre"
+        />
+        @if (formulario().get('nombre')?.invalid &&
+        formulario().get('nombre')?.touched) {
+        <small class="text-orange-600 mb-3">El nombre es requerido.</small>
+        }
+
+        <label class="text-primario text-lg font-semibold" for="celular">Celular:</label>
+        <input class="bg-gray-50 text-gray-800 border border-solid border-primario-2 rounded-md"
+          id="celular"
+          formControlName="celular"
+          placeholder="Ingrese su número de celular"
+        />
+        @if (formulario().get('celular')?.invalid &&
+        formulario().get('celular')?.touched) {
+        <small class="text-orange-600 mb-3"
+          >Debe ser un número válido de 9 dígitos.</small
+        >
+        }
+
+        <label class="text-primario text-lg font-semibold" for="email">Correo:</label>
+        <input class="bg-gray-50 text-gray-800 border border-solid border-primario-2 rounded-md"
+          id="email"
+          formControlName="email"
+          placeholder="Ingrese su email"
+        />
+        @if (formulario().get('email')?.invalid &&
+        formulario().get('email')?.touched) {
+        <small class="text-orange-600 mb-3">Ingrese un correo válido.</small>
+        }
+
+        <label class="text-primario text-lg font-semibold" for="asunto">Asunto:</label>
+        <input class="bg-gray-50 text-gray-800 border border-solid border-primario-2 rounded-md"
+          id="asunto"
+          formControlName="asunto"
+          placeholder="Ej: Tarjetas Personales"
+        />
+        @if (formulario().get('asunto')?.invalid &&
+        formulario().get('asunto')?.touched) {
+        <small class="text-orange-600 mb-3">Este campo es requerido.</small>
+        }
+
+        <label class="text-primario text-lg font-semibold" for="mensaje">Mensaje:</label>
+        <textarea class="bg-gray-50 text-gray-800 border border-solid border-primario-2 rounded-md font-sans resize-none"
+          id="mensaje"
+          formControlName="mensaje"
+          placeholder="Estoy interesado en adquirir 1000 unidades de .."
+        ></textarea>
+        @if (formulario().get('mensaje')?.invalid &&
+        formulario().get('mensaje')?.touched) {
+        <small class="text-orange-600 mb-3">Es necesario conocer tu mensaje.</small>
+        }
+        <p-toast />
+        <button class="p-4 bg-primario-2 disabled:bg-gray-500 rounded-md cursor-pointer text-secundario border-none" type="submit" [disabled]="formulario().invalid">Enviar</button>
+        <!-- @if (respuesta) {
+          <div class="mt-4 p-4 bg-green-200 rounded-md" [ngClass]="{'text-green-800': respuesta.status, 'text-red-800': respuesta.status == false}">
+            {{ respuesta.message }}
+          </div>
+      
+        } -->
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="contenedor contenedor--primario">
+    <div class="subcontenedor">
+        <div class="w-full text-primario-2 font-bold text-4xl text-center">
+            Nuestra <span class="text-secundario">Ubicación</span>
+          </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5518.02307170964!2d-77.03708133202481!3d-12.055109684397774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9a92742653d%3A0xc3f7ad5288c4c197!2sC.C.%20Centro%20Lima!5e0!3m2!1ses-419!2spe!4v1727469791116!5m2!1ses-419!2spe" class="w-full rounded-lg" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="w-56 p-2 flex flex-col m-auto gap-2 rounded-lg text-primario shadow-md text-center">
+    <div class="rounded-md w-full h-36 overflow-hidden">
+        <img appImgBroken class="w-full h-full object-cover" [src]="producto().src_img" alt="" srcset="">
+    </div>
+    <div class="font-semibold text-2xl py-3"><i class="pi pi-verified text-2xl text-green-500"></i> {{ producto().nombre }}</div>
+    <!-- <div class="text-lg font-semibold">S/ {{ producto().precio }}</div> -->
+    <button class="transition-colors duration-300" ><span class="bg-primario-2">Cotizar</span></button>
+</div>
+
+<!-- w-full bg-primario-2 text-secundario py-3 border-none rounded-md cursor-pointer hover:bg-primario -->

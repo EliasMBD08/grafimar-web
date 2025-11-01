@@ -1,0 +1,11 @@
+@if (categoria) {
+    <div class="contenedor contenedor-secundario">
+        <div class="subconenedor text-center">
+            <h1>{{ categoria.nombre }}</h1>
+            <img [src]="categoria.src_img" alt="{{ categoria.nombre }}" class="categoria-detail-img">
+            <p>Aquí puedes agregar más información de la categoría...</p>
+        </div>
+    </div>
+} @else {
+    <p>Categoría no encontrada.</p>
+}

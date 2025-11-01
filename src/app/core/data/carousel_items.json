@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "first": "Letreros",
+      "second": "Luminosos"
+    },
+    "subtitle": "Ilumina tu marca con estilo",
+    "link": "#",
+    "image": "/images/carousel/carousel_1.webp"
+  },
+  {
+    "id": 2,
+    "title": {
+      "first": "Formato",
+      "second": "Continuo"
+    },
+    "subtitle": "Impresiones para grandes volúmenes",
+    "link": "#",
+    "image": "/images/carousel/carousel_2.webp"
+  },
+  {
+    "id": 3,
+    "title": {
+      "first": "Paneles",
+      "second": "Publicitarios"
+    },
+    "subtitle": "Comunica en grande",
+    "link": "#",
+    "image": "/images/carousel/carousel_3.webp"
+  },
+  {
+    "id": 4,
+    "title": {
+      "first": "Diseño",
+      "second": "Creativo"
+    },
+    "subtitle": "Ideas que capturan la atención",
+    "link": "#",
+    "image": "/images/carousel/carousel_4.webp"
+  }
+]

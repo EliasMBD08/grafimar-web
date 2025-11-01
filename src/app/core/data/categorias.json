@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "nombre": "Impresión Offset",
+    "slug": "impresion-offset",
+    "src_img": "/images/servicios/offset/offset.webp",
+    "productos": [
+      "Tarjetas de presentación",
+      "Volantes",
+      "Catálogos",
+      "Revistas",
+      "Folletos"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Impresión Digital",
+    "slug": "impresion-digital",
+    "src_img": "/images/servicios/digital/digital.webp",
+    "productos": [
+      "Documentos impresos",
+      "Posters",
+      "Impresiones a color",
+      "Etiquetas personalizadas",
+      "Impresión rápida"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Gigantografía",
+    "slug": "gigantografia",
+    "src_img": "/images/servicios/gigantografia/gigantografia.webp",
+    "productos": [
+      "Vinilos",
+      "Banners",
+      "Lonas publicitarias",
+      "Backings",
+      "Paneles de gran formato"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Merchandising",
+    "slug": "merchandising",
+    "src_img": "/images/servicios/merchandising/merchandising.webp",
+    "productos": [
+      "Lapiceros personalizados",
+      "Tazas personalizadas",
+      "Llaveros",
+      "Bolsos promocionales",
+      "Botellas personalizadas"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Impresión Textil",
+    "slug": "impresion-textil",
+    "src_img": "/images/servicios/textil/textil.webp",
+    "productos": [
+      "Camisetas estampadas",
+      "Gorras personalizadas",
+      "Banderas",
+      "Bolsas de tela",
+      "Parches bordados"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Serigrafía",
+    "slug": "serigrafia",
+    "src_img": "/images/servicios/serigrafia/serigrafia.webp",
+    "productos": [
+      "Camisetas serigrafiadas",
+      "Posters artísticos",
+      "Pegatinas",
+      "Carteles",
+      "Impresión sobre madera"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Rotulación",
+    "slug": "rotulacion",
+    "src_img": "/images/servicios/rotulacion/rotulacion.webp",
+    "productos": [
+      "Letreros luminosos",
+      "Rótulos comerciales",
+      "Señalización",
+      "Vinilos decorativos",
+      "Placas corporativas"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Impresión de Seguridad",
+    "slug": "impresion-seguridad",
+    "src_img": "/images/servicios/seguridad/seguridad.webp",
+    "productos": [
+      "Cheques",
+      "Certificados",
+      "Entradas de eventos",
+      "Etiquetas holográficas",
+      "Tarjetas de identificación"
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Packaging",
+    "slug": "packaging",
+    "src_img": "/images/servicios/packaging/packaging.webp",
+    "productos": [
+      "Cajas personalizadas",
+      "Bolsas de papel",
+      "Envases de cartón",
+      "Etiquetas para productos",
+      "Cajas plegables"
+    ]
+  }
+]
